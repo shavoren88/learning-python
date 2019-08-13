@@ -1,0 +1,274 @@
+"C:\Users\LAPTOP_이승열\PycharmProjects\study python\venv\Scripts\python.exe" "C:\Program Files\JetBrains\PyCharm 2019.2\helpers\pydev\pydevconsole.py" --mode=client --port=59492
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\Users\\LAPTOP_이승열\\PycharmProjects\\study python', 'C:/Users/LAPTOP_이승열/PycharmProjects/study python'])
+PyDev console: starting.
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit (Intel)] on win32
+print(s2)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 's2' is not defined
+s1 = set([1,2,3])
+s1
+{1, 2, 3}
+s2 = set("hello")
+s2
+{'e', 'l', 'o', 'h'}
+l1 = liset(s1)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'liset' is not defined
+l1 = list(s1)
+l1
+[1, 2, 3]
+l2 = list(s2)
+l2
+['e', 'l', 'o', 'h']
+clear()
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'clear' is not defined
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+s1 & s2
+{4, 5, 6}
+s1.intersection(s2)
+{4, 5, 6}
+s1 | s2
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+s1.union(s2)
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+s1 - s2
+{1, 2, 3}
+s1.minus(s2)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+AttributeError: 'set' object has no attribute 'minus'
+s1.difference(s2)
+{1, 2, 3}
+s1.add(4)
+s1
+{1, 2, 3, 4, 5, 6}
+s1add(7)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 's1add' is not defined
+s1.add(7)
+s1
+{1, 2, 3, 4, 5, 6, 7}
+s1.update(8,9)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: 'int' object is not iterable
+s1.update([8,9])
+s1
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+s1.remove([4,5,6,7,8,9])
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: unhashable type: 'list'
+s1.remove(9)
+s1
+{1, 2, 3, 4, 5, 6, 7, 8}
+s1.remove([7,8])
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: unhashable type: 'list'
+# 제거는 여러게 안되나?
+a = true
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'true' is not defined
+a = True
+b = False
+type(a)
+<class 'bool'>
+type(b)
+<class 'bool'>
+1 == 1
+True
+2 > 1
+True
+2 < 1
+False
+a = [1,2,3,4]
+while a:
+    print(a.pop())
+    
+4
+3
+2
+1
+if []:
+    print("참")
+else:
+    print("거짓")
+    
+거짓
+if [1,2,3]:
+    print("참")
+else:
+    print("거짓")
+    
+참
+bool('python')
+True
+bool('')
+False
+bool([1,2,3])
+True
+bool(1,2,3)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: bool expected at most 1 arguments, got 3
+bool([1,2,3])
+True
+bool({1,2,3})
+True
+bool((1,2,3))
+True
+bool(())
+False
+bool9{}0
+  File "<input>", line 1
+    bool9{}0
+         ^
+SyntaxError: invalid syntax
+bool({})
+False
+bool([])
+False
+bool(0)
+False
+bool(2)
+True
+bool("")
+False
+bool('none')
+True
+bool(none)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'none' is not defined
+bool('')
+False
+bool(None)
+False
+bool(-1)
+True
+ a = 1
+  File "<input>", line 1
+    a = 1
+    ^
+IndentationError: unexpected indent
+b = "python"
+c = [1,2,3]
+a = 2
+a = 1
+a = 2
+a = 1
+id(a)
+1880581296
+a.id()
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+AttributeError: 'int' object has no attribute 'id'
+id(b)
+57417600
+id(c)
+61735080
+a = [1,2,3]
+b = a
+id(a)
+61769688
+id(b)
+61769688
+a is b
+True
+a[1] = 4
+a
+[1, 4, 3]
+b
+[1, 4, 3]
+b = a[:]
+a[1] = 2
+a
+[1, 2, 3]
+b
+[1, 4, 3]
+id(a)
+61769688
+id(b)
+61789208
+from copy import copy
+b = copy(a)
+a
+[1, 2, 3]
+b
+[1, 2, 3]
+id(a)
+61769688
+id(b)
+61789768
+a is b
+False
+c = b[:]
+id(b)
+61789768
+id(c)
+61790488
+b
+[1, 2, 3]
+c
+[1, 2, 3]
+a, b = ['python','life']
+a
+'python'
+b
+'life'
+(a,b)
+('python', 'life')
+[a,b]
+['python', 'life']
+{a,b}
+{'life', 'python'}
+a=b
+a
+'life'
+b
+'life'
+id(a)
+60220320
+id(b)
+60220320
+a = copy(b)
+b
+'life'
+id(a)
+60220320
+id(b)
+60220320
+a = 3
+b = 5
+a,b = b,a
+a
+5
+b
+3
+a = 80
+b = 75
+c = 55
+total = a + b + c
+count(total)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'count' is not defined
+total.count()
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+AttributeError: 'int' object has no attribute 'count'
+len(total)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: object of type 'int' has no len()
+total / 3
+70.0
